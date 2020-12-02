@@ -1,0 +1,213 @@
+#mainNav {
+	border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+	background-color: #fff;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+#mainNav .navbar-brand {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #99003d;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
+	color: #99003d;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+	font-size: .9rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #212529;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+	color: #99003d;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+	color: #99003d !important;
+	background-color: transparent;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+	background-color: transparent;
+}
+
+@media (min-width: 992px) {
+	#mainNav {
+		border-color: transparent;
+		background-color: transparent;
+	}
+	#mainNav .navbar-brand:focus,
+	#mainNav .navbar-brand:hover {
+		color: #99003d;
+	}
+	#mainNav .navbar-nav > li.nav-item > a.nav-link {
+		padding: 0.5rem 1rem;
+	}
+
+	#mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+	#mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+		color: #800033;
+	}
+	#mainNav.navbar-shrink {
+		border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+		background-color: #fff;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		color: #99003d;
+	}
+	#mainNav.navbar-shrink .navbar-brand:focus,
+	#mainNav.navbar-shrink .navbar-brand:hover {
+		color: #99003d;
+	}
+	#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
+	#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
+		color: #212529;
+	}
+	#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
+	#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+		color: #99003d;
+	}
+}
+
+
+header.masthead {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - 56px);
+	background-image: url("../img/header.jpg");
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+header.masthead hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+header.masthead h1 {
+	font-size: 2rem;
+}
+
+header.masthead p {
+	font-weight: 300;
+}
+
+@media (min-width: 768px) {
+	header.masthead p {
+		font-size: 1.15rem;
+	}
+}
+
+@media (min-width: 992px) {
+	header.masthead {
+		height: 100vh;
+		min-height: 650px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	header.masthead h1 {
+		font-size: 3rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	header.masthead h1 {
+		font-size: 4rem;
+	}
+}
+
+
+legend {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-align: center;
+}
+
+h4 {
+	margin-bottom: 20px;
+}
+
+#salary hr {
+	max-width: 100%;
+	border-color: #ddd;
+	border: 0;
+	border-bottom: 2px solid rgba(33, 37, 41, 0.1);
+}
+
+input[type=text],
+select {
+	margin-bottom: 20px;
+	width: 100% !important;
+}
+.groos-incom .tax .input-group-text{
+	width: 200px;
+	padding: 3px;
+}
+.input-group-text{
+	width: 100px;
+	padding: 3px;
+	margin-right: 10px;
+}
+.input-group-text span{
+    margin-left: 10px;
+}
+
+.checkbox,
+.radio,
+.form-label{
+	margin-bottom: 0.25rem;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.2;
+	font-size: 1.2rem;
+}
+
+
+input[type=submit] {
+	margin-top: 25px;
+	margin-bottom: 35px;
+}
+
+section#calculations {
+	padding: 8rem 0 0 0 !important;
+}
+
+footer {
+	background-color: #212529;
+	color: #fff;
+}
+/* hide rate and date section*/
+#rateGroup{
+	display: none;
+}
+#dateGroup{
+	display: none;
+}
+
+.form-control:focus{
+	box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(255, 0, 64, 0.25);
+	border: solid 1px rgba(153, 0, 61, 0.25);
+}
+.form-control{
+	border: solid 1px rgba(0, 0, 0, 0.25);
+}
+option:hover,option:checked,option:focus{
+	background: rgba(255, 0, 64, 0.25) !important;
+	box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(255, 0, 64, 0.25);
+	color: #fff;
+}

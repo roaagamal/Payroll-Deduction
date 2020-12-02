@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>HM Revenue & Customs</title>
+        <link href="/img/favicon.ico" rel="icon" type="image/x-icon"/>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+              rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="css/jquery.steps.css">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/cal.css" rel="stylesheet">
+
+
+    </head>
+
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Payroll Deductions</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
+                        </li>
+<!--                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="Report.jsp">Report</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="calculations">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Tax Calculation</h2>
+                        <hr class="my-4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <form id="taxCalculation" action="Calculate_Tax.jsp" class="col-8" method="get">
+                        <h3>Start</h3>
+                        <fieldset>
+
+                            <legend>Peronal Infomation</legend>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="fistName">First Name :</label>
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control col-12" type="text" name="fistName" id="fistName" placeholder="Enter your Fisrt Name"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="lastName">Last Name :</label>
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control col-12" type="text" name="lastName" id="lastName" placeholder="Enter your Last Name"/>
+                                </div>
+                            </div>
+
+                            <!--End Group-->
+                            <!--Begin Group-->
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="code">Your Tax Code :<span class="required"> *</span></label>
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control col-12" type="text" name="code" id="code" placeholder="S1564L"/>
+                                </div>
+                            </div>
+                            <!--End Group-->
+
+                            <!--Begin Group-->
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="payPeriod">Nationality :<span class="required"> *</span></label>
+                                </div>
+                                <div class="input-group col-12" id="nationality">
+                                    <div class="input-group-text">
+                                        <input type="radio" name="nationality" value="UK" checked><span>UK</span>
+                                    </div>
+                                    <div class="input-group-text">
+                                        <input type="radio" name="nationality" value="Scottish"><span>Scottish</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Group-->
+                        </fieldset>
+
+                        <h3>Gross Income</h3>
+                        <fieldset class="groos-incom">
+                            <legend>Gross Income</legend>
+
+                            <!--Begin Group-->
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="grossPay">Gross Pay : <span class="required">*</span>
+                                    </label>
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control" type="text" name="grossPay" id="grossPay"
+                                           placeholder="£ 0.00"/>
+                                </div>
+                            </div>
+                            <!--End Group-->
+
+                            <!--Begin Group-->
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="payPeriod">Per :<span class="required"> *</span></label>
+                                </div>
+                                <div class="col-12">
+                                    <select name="payPeriod" id="payPeriod" class="form-control bs-select">
+                                        <option value="" selected="selected">Select</option>
+                                        <option value="week">Week</option>
+                                        <option value="month">Month</option>
+                                        <option value="year">Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--End Group-->
+                            <!--Begin Group-->
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label>Do you Know your gross pay ?<span class="required"> *</span> </label>
+                                </div>
+
+                                <div class="col-12 input-form-group pay">
+                                    <div class="radio input-group-text">
+                                        <input type="radio" name="knowORnot" value="1"  id="cppoption1"/>
+                                        <span>Yes</span>
+                                    </div>
+
+                                    <div class="radio input-group-text pay">
+                                        <input type="radio" name="knowORnot" value="2"  id="cppoption2"/>
+                                        <span> No </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Group-->
+
+                            <!--Begin Group-->
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label>Tax Code: <span class="required"> *</span></label>
+                                </div>
+
+                                <div class="col-12 input-form-group tax">
+                                    <div class="radio input-group-text">
+                                        <input type="radio" name="cumlativelyORnon" value="1"  id="eioption1"/> 
+                                        <span> Cumulatively</span>
+
+                                    </div>
+                                    <div class="radio input-group-text">
+                                        <input type="radio" name="cumlativelyORnon" value="2"  id="eioption2"/>
+                                        <span> Non-Cumulatively </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Group-->
+                            <div id="rateGroup">
+                                <!--Begin Group-->
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <label for="hourlyRate">Hourly rate : <span class="required">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" name="hourlyRate" id="hourlyRate"
+                                               placeholder="£ 0.00"/>
+                                    </div>
+                                </div>
+                                <!--End Group-->
+
+                                <!--Begin Group-->
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <label for="hoursPerWeek">Hours per week : <span class="required">*</span></label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" name="hoursPerWeek" id="hoursPerWeek" placeholder="£ 0.00"/>
+                                    </div>
+                                </div>
+                                <!--End Group-->
+                            </div>
+                            <div id="dateGroup">
+                                <!--Begin Group-->
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <label for="previous">Previous pay to date : <span class="required">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" name="previous" id="previous" placeholder="£ 0.00"/>
+                                    </div>
+                                </div>
+                                <!--End Group-->
+                                <!--Begin Group-->
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <label for="payPeriod">Date :<span class="required"> *</span></label>
+                                    </div>
+                                    <div class="col-4">
+                                        <select name="date" id="date" class="form-control bs-select">
+                                            <option value="" selected="selected">DD</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>                            
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <select name="month" id="month" class="form-control bs-select">
+                                            <option value="" selected="selected">MM</option>
+                                            <option value="Jan">Jan</option>
+                                            <option value="Feb">Feb</option>
+                                            <option value="Mar">Mar</option>
+                                            <option value="Apr">Apr</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="Aug">Aug</option>
+                                            <option value="Sep">Sep</option>
+                                            <option value="Oct">Oct</option>
+                                            <option value="Nov">Nov</option>
+                                            <option value="Dec">Dec</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <select name="year" id="year" class="form-control bs-select">
+                                            <option value="" selected="selected">YYYY</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div id="response"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <span class="copyright">Copyright &copy; 2019</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+        <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+        <script src="js/jquery.steps.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/app.js"></script>
+        <script src="js/enable.js"></script>
+    </body>
+</html>
