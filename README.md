@@ -7,6 +7,6 @@ The software uses the information to perform calculations and deduct withholding
 
 ### Authors
 
-* [Abdelrhman Adel](https://github.com/abdoadel142)
+* [Abdelrhman Adel](https://www.linkedin.com/in/abdoadel142/)
 * [Roa'a Gamal](https://www.linkedin.com/in/roaagamal10/)
-* [Samar Negm](https://github.com/SamarNegm)
+* [Samar Negm](https://www.linkedin.com/in/samar-negm-7b79b41a8/)
