@@ -1,4 +1,4 @@
-# Payroll-Deduction
+# Payroll Deduction
  
 A payroll Deduction system is software designed to calculate employee taxes. These tasks can include withholding taxes and deductions, printing reports. 
 
